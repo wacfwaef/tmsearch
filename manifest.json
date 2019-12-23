@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "TM Search",
+    "description": "A simple addon to search on Transfermarkt the selected text from any active URL tab",
+    "version": "1.0",
+    "permissions": [
+        "tabs"
+      ],
+      "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+          "js": ["content_script.js"]
+        }
+      ],
+    "background": {
+        "scripts": ["background.js" ]
+
+    },
+    "browser_action":{
+        "default_icon": "tmsearch.png",
+        "default_title": "Press to search on Transfermarkt the selected text."
+    }
+}
